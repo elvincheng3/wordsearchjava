@@ -6,6 +6,7 @@ import java.util.Scanner;
 class WordSearch {
     private final char[][] data;
     private final ArrayList<String> keyWords;
+    private final String wordList = "INSERT WORD LIST DIRECTORY";
 
     private WordSearch(int rows, int cols) {
         data = new char[rows][cols];
@@ -168,7 +169,7 @@ class WordSearch {
     }
 
     private void addWords(int numOfWords) throws FileNotFoundException {
-        Scanner s = new Scanner(new File("/Users/code/IdeaProjects/wordSearch/src/words.text"));
+        Scanner s = new Scanner(new File(wordList));
         ArrayList<String> words = new ArrayList<>();
         while (s.hasNextLine()) {
             words.add(s.nextLine());
